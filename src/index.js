@@ -11,7 +11,7 @@ module.exports = function check(str, bracketsConfig) {
         stack.push(splited[i]);
       } else {
         let last = stack.pop();
-        if (brackets.indexOf(splited[i]) - 1 === last) {
+        if (brackets[brackets.indexOf(splited[i]) - 1] !== last) {
           return false;
         }
       }
